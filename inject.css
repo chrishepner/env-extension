@@ -50,10 +50,10 @@
 }
 
 .productionWarningBanner-blinky {
-    animation: blink 2s linear infinite;
+    animation: banner-blinky 2s linear infinite;
 }
 
-@-webkit-keyframes blink {
+@-webkit-keyframes banner-blinky {
     0% { opacity: 1; }
     60% { opacity: 1; }
     70% { opacity: 0; }
