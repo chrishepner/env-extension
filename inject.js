@@ -24,7 +24,6 @@
         banner.style.opacity = settings.opacity;
         bannerText.id = 'productionWarningBanner-text';
         bannerText.style.color = settings.textColor;
-        console.log(settings.blinky);
         if (settings.blinky) {
             bannerText.classList.add('productionWarningBanner-blinky');
         }

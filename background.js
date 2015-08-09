@@ -11,7 +11,6 @@ var getUrls = function(callback) {
 var isMatch = function(url, domainEntry) {
     if (domainEntry.regex) {
         var regex = new RegExp(domainEntry.url);
-        console.log(regex, url, url.match(regex));
         return url.match(regex);
     } else {
         return (url.indexOf(domainEntry.url) !== -1);
