@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Production Environment Warning",
+  "description": "This extension shows a warning when visiting a production environment in the browser",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    "inject.js"
+  ],
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "storage",
+    "http://*/",
+    "https://*/"
+  ]
+}
