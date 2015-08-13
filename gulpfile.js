@@ -24,10 +24,15 @@ gulp.task('manifest', function() {
         .pipe(gulp.dest('dist'))
 });
 
+gulp.task('icons', function() {
+    gulp.src(['app/icons/**'])
+        .pipe(gulp.dest('dist/icons'))
+});
+
 
 gulp.task('default', function() {
 
-    gulp.run('scripts', 'css', 'html', 'manifest');
+    gulp.run('scripts', 'css', 'html', 'manifest', 'icons');
 
     gulp.watch('app/**/*.js', function(event) {
         gulp.run('scripts');
@@ -43,5 +48,9 @@ gulp.task('default', function() {
 
     gulp.watch('app/**/manifest.json', function(event) {
         gulp.run('manifest');
+    });
+
+    gulp.watch('app/icons/**', function(event) {
+        gulp.run('icons');
     })
 });

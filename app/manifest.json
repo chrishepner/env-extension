@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Production Environment Warning",
-  "description": "This extension shows a warning when visiting a production environment in the browser",
+  "name": "Environment Notification Banner",
+  "description": "This extension shows a warning banner on the page when visiting a specified set of URLS",
   "version": "1.0",
   "background": {
     "scripts": ["background.js"]
@@ -10,6 +10,10 @@
   "web_accessible_resources": [
     "inject.js"
   ],
+  "icons": {
+    "48": "icons/alert-48.png",
+    "128": "icons/alert-128.png"
+  },
   "options_page": "options.html",
   "permissions": [
     "tabs",

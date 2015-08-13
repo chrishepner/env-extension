@@ -1,7 +1,10 @@
 # Environment Notification Extension
 
-This is a chrome extension that displays a banner when the URL of the current page matches a specified substring or
+This is a Chrome extension that displays a banner when the URL of the current page matches a specified substring or
 regular expression.
+
+I wrote this because, as a developer, I frequently switch between development and production
+environments and would like a visible warning before I publish "LOL BUTTS TESTING123" on the public website of my employer.
 
 ## Use
 
