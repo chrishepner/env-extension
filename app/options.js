@@ -25,7 +25,6 @@ function saveOptions(e) {
             };
         }
     });
-    console.log(urls);
 
     chrome.storage.sync.set({
         urls: urls,
@@ -44,15 +43,14 @@ function saveOptions(e) {
     });
 }
 
-// Restores select box and checkbox state using the preferences
+// Restores UI options state using the preferences
 // stored in chrome.storage.
 function loadOptions() {
-    // Use default value color = 'red' and likesColor = true.
     chrome.storage.sync.get({
         urls: [],
         warningText: "You're on a production site",
-        backgroundColor: '#FFBABA',
-        textColor: '#D8000C',
+        backgroundColor: '#a72600',
+        textColor: '#ffffff',
         opacity:.95,
         blinky: false
     }, function(items) {
