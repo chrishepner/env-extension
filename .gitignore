@@ -4,3 +4,4 @@ node_modules/
 **/*.pem
 **/*.crx
 env-extension.zip
+npm-debug.log

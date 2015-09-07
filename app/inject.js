@@ -1,18 +1,8 @@
 
 (function() {
+    var defaults = require('./defaults');
 
-    // CSS (banner background color, text color)
-    // defined in parent settings
-    // @TODO ^
-
-    chrome.storage.sync.get({
-        urls: [],
-        warningText: "You're on a production site",
-        backgroundColor: '#FFBABA',
-        textColor: '#D8000C',
-        opacity:.95,
-        blinky: false
-    }, function(settings) {
+    chrome.storage.sync.get(defaults, function(settings) {
         var body = document.body;
         var bannerWrapper = document.createElement('div');
         var banner = document.createElement('div');

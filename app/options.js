@@ -1,3 +1,5 @@
+var defaults = require('./defaults');
+
 // Saves options to chrome.storage
 function saveOptions(e) {
     e.preventDefault();
@@ -26,14 +28,7 @@ function saveOptions(e) {
         }
     });
 
-    chrome.storage.sync.set({
-        urls: urls,
-        warningText: warningText,
-        backgroundColor: backgroundColor,
-        textColor: textColor,
-        opacity: opacity,
-        blinky: blinky
-    }, function() {
+    chrome.storage.sync.set(defaults, function() {
         // Update status to let user know options were saved.
         var status = document.getElementById('status');
         status.textContent = 'Options saved.';
