@@ -28,7 +28,14 @@ function saveOptions(e) {
         }
     });
 
-    chrome.storage.sync.set(defaults, function() {
+    chrome.storage.sync.set({
+        urls: urls,
+        warningText: warningText,
+        backgroundColor: backgroundColor,
+        textColor: textColor,
+        opacity: opacity,
+        blinky: blinky
+    }, function() {
         // Update status to let user know options were saved.
         var status = document.getElementById('status');
         status.textContent = 'Options saved.';
@@ -41,14 +48,7 @@ function saveOptions(e) {
 // Restores UI options state using the preferences
 // stored in chrome.storage.
 function loadOptions() {
-    chrome.storage.sync.get({
-        urls: [],
-        warningText: "You're on a production site",
-        backgroundColor: '#a72600',
-        textColor: '#ffffff',
-        opacity:.95,
-        blinky: false
-    }, function(items) {
+    chrome.storage.sync.get(defaults, function(items) {
         var urlText = '';
         for(var i=0; i < items.urls.length; i++) {
             if (items.urls[i].regex) {
