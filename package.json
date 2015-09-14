@@ -1,6 +1,6 @@
 {
   "name": "env-extension",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Environment notification browser extension",
   "main": "background.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "Chris Hepner",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrishepner/env-extension"
+  },
   "dependencies": {
     "bootstrap": "^3.3.5"
   },
