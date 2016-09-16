@@ -3,6 +3,8 @@
     var defaults = require('./defaults');
 
     chrome.storage.sync.get(defaults, function(settings) {
+        if(document.getElementById('productionWarningBanner-wrapper')) return;
+        
         var body = document.body;
         var bannerWrapper = document.createElement('div');
         var banner = document.createElement('div');
