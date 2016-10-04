@@ -1,6 +1,6 @@
 {
   "name": "env-extension",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Environment notification browser extension",
   "main": "background.js",
   "scripts": {
