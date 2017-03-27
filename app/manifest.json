@@ -3,7 +3,7 @@
 
   "name": "Environment Notification Banner",
   "description": "This extension shows a warning banner on the page when visiting a specified set of URLS",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "background": {
     "scripts": ["background.js"]
   },

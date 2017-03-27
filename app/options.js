@@ -10,6 +10,7 @@ function saveOptions(e) {
     var textColor = document.getElementById('value-text-color').value;
     var opacity = document.getElementById('value-opacity').value;
     var blinky = document.getElementById('value-blinky').checked;
+    var top = document.getElementById('value-top').checked;
 
     urls = urls.split("\n").filter(function(item) {
         return item.length > 0;
@@ -34,7 +35,8 @@ function saveOptions(e) {
         backgroundColor: backgroundColor,
         textColor: textColor,
         opacity: opacity,
-        blinky: blinky
+        blinky: blinky,
+        top: top
     }, function() {
         // Update status to let user know options were saved.
         var status = document.getElementById('status');
@@ -66,6 +68,7 @@ function loadOptions() {
         document.getElementById('value-text-color').value = items.textColor;
         document.getElementById('value-opacity').value = items.opacity;
         document.getElementById('value-blinky').checked = items.blinky;
+        document.getElementById('value-top').checked = items.top;
     });
 }
 document.addEventListener('DOMContentLoaded', loadOptions);
