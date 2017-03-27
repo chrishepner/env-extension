@@ -11,9 +11,9 @@
         var bannerText = document.createElement('p');
         var closeButton = document.createElement('a');
         bannerWrapper.id = 'productionWarningBanner-wrapper';
-        if (settings.top) {
+        if (settings.bottom) {
           bannerWrapper.style.top = 'auto';
-          bannerWrapper.style.bottom = '12px';
+          bannerWrapper.style.bottom = 0;
         }
         banner.id = 'productionWarningBanner';
         banner.style.backgroundColor = settings.backgroundColor;

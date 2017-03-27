@@ -1,7 +1,7 @@
 #productionWarningBanner-wrapper {
-    left:0;
     top:0;
     bottom:auto;
+    left:0;
     position:fixed;
     margin:0;
     padding:0;

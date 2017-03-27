@@ -6,7 +6,7 @@ var defaults = {
   textColor: '#ffffff',
   opacity:.95,
   blinky: false,
-  top: 0
+  bottom: false
 };
 
 module.exports = defaults;
