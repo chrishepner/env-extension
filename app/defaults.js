@@ -5,7 +5,8 @@ var defaults = {
   backgroundColor: '#a72600',
   textColor: '#ffffff',
   opacity:.95,
-  blinky: false
+  blinky: false,
+  bottom: false
 };
 
 module.exports = defaults;
