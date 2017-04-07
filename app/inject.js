@@ -4,13 +4,17 @@
 
     chrome.storage.sync.get(defaults, function(settings) {
         if(document.getElementById('productionWarningBanner-wrapper')) return;
-        
+
         var body = document.body;
         var bannerWrapper = document.createElement('div');
         var banner = document.createElement('div');
         var bannerText = document.createElement('p');
         var closeButton = document.createElement('a');
         bannerWrapper.id = 'productionWarningBanner-wrapper';
+        if (settings.bottom) {
+          bannerWrapper.style.top = 'auto';
+          bannerWrapper.style.bottom = 0;
+        }
         banner.id = 'productionWarningBanner';
         banner.style.backgroundColor = settings.backgroundColor;
         banner.style.opacity = settings.opacity;
