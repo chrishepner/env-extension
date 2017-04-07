@@ -1,6 +1,8 @@
 var gulp = require('gulp');
-var minifyCSS = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
+var purify = require('gulp-purifycss');
+var minifyCSS = require('gulp-minify-css');
+var imagemin = require('gulp-imagemin');
 var webpack = require('gulp-webpack');
 var named = require('vinyl-named');
 
@@ -18,6 +20,7 @@ gulp.task('scripts', function() {
 
 gulp.task('css', function() {
   gulp.src(['app/**/*.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css'])
+    .pipe(purify(['./app/**/*.js', './app/**/*.html']))
     .pipe(minifyCSS())
     .pipe(gulp.dest('dist'))
 });
@@ -34,6 +37,7 @@ gulp.task('manifest', function() {
 
 gulp.task('icons', function() {
   gulp.src(['app/icons/**'])
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/icons'))
 });
 
